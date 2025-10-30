@@ -18,15 +18,17 @@ class GameModel {
     var discardDeck: [CargoCard] // The discard deck
     var ships: [Ship] // Only 3 ships in the game
     var weather: Int // Int: 1-5
+    var gameHistoryLog: String // TBD
     private let allShipsReadyToSailFlag = 3 // When all 3 ships are ready to sail
     
-    init(players: [Player], drawDeck:[CargoCard], marketplace:[CargoCard], discardDeck:[CargoCard], ships:[Ship], weather: Int = 3) {
+    init(players: [Player], drawDeck:[CargoCard], marketplace:[CargoCard], discardDeck:[CargoCard], ships:[Ship], weather: Int = 3, gameHistoryLog: gameHistoryLog) {
         self.players = players
         self.drawDeck = drawDeck
         self.discardDeck = discardDeck
         self.marketplace = marketplace
         self.ships = ships
         self.weather = weather
+        self.gameHistoryLog = gameHistoryLog
     }
     
     func isGameOver() -> Bool {
