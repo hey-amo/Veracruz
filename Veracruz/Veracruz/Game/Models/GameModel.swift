@@ -33,7 +33,7 @@ class GameModel {
     
     func isGameOver() -> Bool {
         /// The game is immediatley over when:
-        /// - All ships have reached their safe loading limit
+        /// - All ships have reached their safe loading limit (sailCriteria)
         ///
         let readyToSailAllShips = ships.map {
             return $0.isReadyToSail == true
@@ -41,6 +41,7 @@ class GameModel {
         
         if (readyToSailAllShips == allShipsReadyToSailFlag) {
             print ("All ships are ready to sail.")
+            return true
         }
         
         return false

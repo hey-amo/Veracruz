@@ -53,7 +53,7 @@ struct Ship: Identifiable, Hashable, Equatable {
     let balance: Int // 1-5
     let cargoCards: [CargoCard]
     let playerBets: [InvestmentCard] // the order of cards is integral to the game
-    let loadingLimit: Int // The ship may sail when its at this weight limit
+    let sailCriteria: Int // The ship may sail when its at this `sailCriteria` weight
     let status: ShipStatus = .atDock // Ships are defaulted to be `atDock`. Their status is only checked end of game
     
     public var weight: Int {
@@ -64,7 +64,7 @@ struct Ship: Identifiable, Hashable, Equatable {
     
     /// The ship is ready to sail when the currentWeight hits the loadingLimit
     public var isReadyToSail: Bool {
-        return (currentWeight >= loadingLimit)
+        return (currentWeight >= sailCriteria)
     }
 }
 
@@ -86,7 +86,7 @@ extension Ship {
                            balance: 0,
                          cargoCards: [CargoCard](),
                          playerBets: [InvestmentCard](),
-                           loadingLimit: 9)
+                         sailCriteria: 9)
         let ship2 = Ship(id: 1,
                            name: "San Antonio",
                          shipColor: .red,
@@ -95,7 +95,7 @@ extension Ship {
                            balance: 0,
                            cargoCards: [CargoCard](),
                          playerBets: [InvestmentCard](),
-                           loadingLimit: 11)
+                         sailCriteria: 11)
         let ship3 = Ship(id: 3,
                            name: "El Juncal",
                          shipColor: .purple,
@@ -104,7 +104,7 @@ extension Ship {
                            balance: 0,
                          cargoCards: [CargoCard](),
                          playerBets: [InvestmentCard](),
-                           loadingLimit: 15)
+                         sailCriteria: 15)
         
         let ships = [ship1, ship2, ship3]
         
