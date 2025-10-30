@@ -19,7 +19,7 @@ struct WeatherManager {
         
         if (coinToss == true) {
             // If `heads`: increase weather by 1
-            guard newWeather < 5 else {
+            guard newWeather < maxWeather else {
                 print ("Weather is maxed out. Value: \(currentWeather)")
                 return currentWeather
             }
@@ -27,7 +27,7 @@ struct WeatherManager {
         }
         else {
             // If `tails`: decrease weather by 1
-            guard newWeather > 1 else {
+            guard newWeather > minWeather else {
                 print ("Weather is at minimum. Value: \(currentWeather)")
                 return currentWeather
             }
