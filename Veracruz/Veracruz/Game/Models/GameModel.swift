@@ -18,10 +18,10 @@ class GameModel {
     var discardDeck: [CargoCard] // The discard deck
     var ships: [Ship] // Only 3 ships in the game
     var weather: Int // Int: 1-5
-    var gameHistoryLog: String // TBD
+    var gameHistoryLog: String? // TBD
     private let allShipsReadyToSailFlag = 3 // When all 3 ships are ready to sail
     
-    init(players: [Player], drawDeck:[CargoCard], marketplace:[CargoCard], discardDeck:[CargoCard], ships:[Ship], weather: Int = 3, gameHistoryLog: gameHistoryLog) {
+    init(players: [Player], drawDeck:[CargoCard], marketplace:[CargoCard], discardDeck:[CargoCard], ships:[Ship], weather: Int = 3, gameHistoryLog: String? = nil) {
         self.players = players
         self.drawDeck = drawDeck
         self.discardDeck = discardDeck
