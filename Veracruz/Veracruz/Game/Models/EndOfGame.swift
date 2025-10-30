@@ -24,6 +24,10 @@
 /// If the tie persists, the tied players share the victory.
 /// If all the galleons sink, nobody wins the game.
 
+fileprivate enum ScoringIfCorrect: Int {
+    case first = 4, second = 2, third = 1, otherwise = 0, failed = -1
+}
+
 class EndOfGameHandler {
     private var gameModel: GameModel
     
