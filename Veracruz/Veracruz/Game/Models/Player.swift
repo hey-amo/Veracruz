@@ -9,6 +9,7 @@ import Foundation
 
 class Player: Identifiable, Equatable, Hashable {
     let id: Int
+    let name: String
     var cards: [CargoCard]
     var investmentCard: InvestmentCard?
     var bettingCards: [BettingCard]
@@ -16,9 +17,10 @@ class Player: Identifiable, Equatable, Hashable {
     var isAI: Bool
     var score: Int
     
-    init(id: Int, cards: [CargoCard], investmentCard: InvestmentCard?, bettingCards: [BettingCard],
+    init(id: Int, name: String, cards: [CargoCard], investmentCard: InvestmentCard?, bettingCards: [BettingCard],
          isOnTurn: Bool = false, isAI: Bool = false, score: Int) {
         self.id = id
+        self.name = name
         self.cards = cards
         self.investmentCard = investmentCard
         self.bettingCards = bettingCards

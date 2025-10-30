@@ -7,6 +7,7 @@
 
 struct PlayerViewModel: Identifiable, Equatable, Hashable {
     let id: Int
+    let name: String
     let avatar: String
     let cards: [CargoCard]
     let investmentCard: InvestmentCard?
