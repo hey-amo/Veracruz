@@ -13,14 +13,14 @@ public enum GameState: Int, CaseIterable {
 
 class GameModel {
     var players: [Player]
-    var drawDeck: [Card] // Draw deck of good cards
-    var marketplace: [Card] // A collection of cards available to take
-    var discardDeck: [Card] // The discard deck
+    var drawDeck: [CargoCard] // Draw deck of good cards
+    var marketplace: [CargoCard] // A collection of cards available to take
+    var discardDeck: [CargoCard] // The discard deck
     var ships: [Ship] // Only 3 ships in the game
     var weather: Int // Int: 1-5
     private let allShipsReadyToSailFlag = 3 // When all 3 ships are ready to sail
     
-    init(players: [Player], drawDeck:[Card], marketplace:[Card], discardDeck:[Card], ships:[Ship], weather: Int = 3) {
+    init(players: [Player], drawDeck:[CargoCard], marketplace:[CargoCard], discardDeck:[CargoCard], ships:[Ship], weather: Int = 3) {
         self.players = players
         self.drawDeck = drawDeck
         self.discardDeck = discardDeck
@@ -44,6 +44,7 @@ class GameModel {
         return false
     }
 }
+
 
 extension GameModel {
     public static func prepareGame(for players: [Player]) -> GameModel? {
