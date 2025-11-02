@@ -32,7 +32,8 @@ extension CargoCard {
     /// - 32 good cards (gold, silver, cocoa, corn).  Values: 1-3
     /// - 7 boxes of stone - 0 value; can be loaded on either side of the ship
     /// - 4 empty boxes - 0 Value; can be loaded on either side of the ship. Removes the last card played to that side.
-    public static func makeCards() {
-        
+    public static func makeCards() -> [CargoCard] {
+        let cargoCards: [CargoCard] = [CargoCard]()
+        return cargoCards
     }
 }
