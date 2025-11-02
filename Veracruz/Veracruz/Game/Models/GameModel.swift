@@ -51,6 +51,23 @@ class GameModel {
 
 extension GameModel {
     public static func prepareGame(for players: [Player]) -> GameModel? {
+        // Generate the 43 good cards
+        print ("Initialising cargo cards")
+        var goodCards = CargoCard.makeCards()
+        
+        // Shuffle the 43 good cards
+        print ("Shuffling the cargo cards")
+        goodCards.shuffle()
+        
+        // Randomly pick the first player
+        print ("Picking 1st player")
+        
+        // Give each player 1 randomised secret investment card
+        print ("Giving each player 1 secret investment card")
+        
+        // Give each player 2 betting cards (Sink, Sail)
+        print ("Giving each player betting cards")
+        
         return nil
     }
 }
