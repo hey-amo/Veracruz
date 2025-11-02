@@ -11,6 +11,14 @@ struct GameView: View {
     var body: some View {
         Text("Veracruz")
             .font(.largeTitle)
+        
+        // Display HUD of all players in the game
+        
+        // Display main body (scrollable)
+        // The game has 3 ships
+        
+        // Display footer
+        
     }
 }
 

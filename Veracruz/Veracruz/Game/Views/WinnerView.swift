@@ -10,9 +10,9 @@ import SwiftUI
 struct WinnerScreenView: View {
     let players: [PlayerViewModel] = [
     
-        PlayerViewModel(id: 1, name: "Tom", avatar: "", cards: [], investmentCard: nil, bettingCards: [], isOnTurn: false, isAI: false, score: 10),
-        PlayerViewModel(id: 2, name: "Alice", avatar: "", cards: [], investmentCard: nil, bettingCards: [], isOnTurn: false, isAI: false, score: 14),
-        PlayerViewModel(id: 3, name: "Sam", avatar: "", cards: [], investmentCard: nil, bettingCards: [], isOnTurn: false, isAI: false, score: 20),
+        PlayerViewModel(id: 1, name: "Tom", avatar: "avt-1", cards: [], investmentCard: nil, bettingCards: [], isOnTurn: false, isAI: false, score: 10),
+        PlayerViewModel(id: 2, name: "Alice", avatar: "avt-2", cards: [], investmentCard: nil, bettingCards: [], isOnTurn: false, isAI: false, score: 14),
+        PlayerViewModel(id: 3, name: "Sam", avatar: "avt-3", cards: [], investmentCard: nil, bettingCards: [], isOnTurn: false, isAI: false, score: 20),
         
     ]
     

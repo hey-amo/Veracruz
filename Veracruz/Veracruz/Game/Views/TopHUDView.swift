@@ -7,10 +7,19 @@
 
 import SwiftUI
 
-/// Show a list of players with a bell and settings button
+/// Show a list of players with a notification bell and settings button
 struct TopHUDView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            PlayerAvatarView()
+            Text("Cards: 3")
+            Button("Bell") {
+                // Do something
+            }
+            Button("Gear") {
+                // Do something
+            }
+        }
     }
 }
 
