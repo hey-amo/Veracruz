@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SettingsView: View {
+    let navigationHandler: NavigationHandler
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
@@ -44,5 +45,5 @@ struct SettingsView: View {
 
 
 #Preview {
-    SettingsView()
+    SettingsView(navigationHandler: NavigationHandler())
 }

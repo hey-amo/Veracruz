@@ -13,7 +13,8 @@ struct VeracruzApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MainMenuView()
+            NavigationContainerView()
+            //MainMenuView()
                 //.environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct WinnerScreenView: View {
+struct WinnerView: View {
+    let navigationHandler: NavigationHandler
+    
     let players: [PlayerViewModel] = [
     
         PlayerViewModel(id: 1, name: "Tom", avatar: "avt-1", cards: [], investmentCard: nil, bettingCards: [], isOnTurn: false, isAI: false, score: 10),
@@ -99,5 +101,5 @@ struct WinnerScreenView: View {
 }
 
 #Preview {
-    WinnerScreenView()
+    WinnerView(navigationHandler: NavigationHandler())
 }

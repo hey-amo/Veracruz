@@ -6,9 +6,13 @@
 //
 
 /// Router for navigation
-enum Route: CaseIterable {
-    case mainMenuView
-    case game
-    case winner
-    case settings
+enum Route: Identifiable, CaseIterable {
+    case mainMenu // launches mainMenuView
+    case newGameSetup // launches PlayerSelectScreenView
+    case game // launches GameView
+    case winner // launches WinnerView
+    case settings // launches SettingsView
+
+    // Conform to Identifiable protocol
+    var id: Self { self }
 }

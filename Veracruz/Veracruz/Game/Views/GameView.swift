@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct GameView: View {
+    let navigationHandler: NavigationHandler
+    
     var body: some View {
         Text("Veracruz")
             .font(.largeTitle)
@@ -23,5 +25,5 @@ struct GameView: View {
 }
 
 #Preview {
-    GameView()
+    GameView(navigationHandler: NavigationHandler())
 }
