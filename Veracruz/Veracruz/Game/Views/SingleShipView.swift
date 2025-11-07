@@ -24,11 +24,59 @@ import SwiftUI
 /// Display a single ship
 struct SingleShipView: View {
     var body: some View {
-        Image("ship-01")
-        Text("Ship.name") // Ship name
-        Text("Ship.currentWeight:") // How much is on the ship (Int)
-        Text("Ship.capacity") // The ships capactiy (Int)
-        Text("")
+        
+        HStack {
+            VStack {
+                Image("ship-01")
+                    .resizable()
+                    .frame(width:100, height: 100)
+                    .aspectRatio(contentMode: .fit)
+                Text("Ship.name")
+                    .font(.headline)
+            }
+            HStack { // Balance
+                HStack {
+                    Text("⚖️").font(.largeTitle)
+                    Text("-3").font(.largeTitle)
+                }
+                HStack { // Cargo current/max
+                    Text("📦").font(.largeTitle)
+                    Text("15/15").font(.largeTitle)
+                }
+            }
+        }
+        Text("⚠️ This ship is likely to sink")
+        VStack {
+            HStack {
+                Text("🂠🂠🂠 3").font(.largeTitle)
+                Text("🂠🂠 2").font(.largeTitle)
+            }
+            Text("Bets")
+                .font(.headline)
+            HStack {
+                Image("avt-1")
+                    .resizable()
+                    .frame(width:50, height: 50)
+                Text("1st").font(.footnote)
+                    
+                Image("avt-2")
+                    .resizable()
+                    .frame(width:50, height: 50)
+                Text("2nd").font(.footnote)
+                
+                Image("avt-3")
+                    .resizable()
+                    .frame(width:50, height: 50)
+                Text("3rd").font(.footnote)
+                                
+                Image("avt-4")
+                    .resizable()
+                    .frame(width:50, height: 50)
+                Text("4th").font(.footnote)
+            
+                    
+            }
+        }
     }
 }
 
